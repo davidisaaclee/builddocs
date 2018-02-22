@@ -2,6 +2,6 @@
   <<if $i>>, <</if>><<if param.rest>>...<</if>>
   <<if param.name>><span class=param><<t param.name>>:</span> <</if>>
   <<type param>>
-  <<if param.default>><span class=defaultvalue> = <<t param.default>></span><</if>>
+  <<if param.default>><span class=defaultvalue><<t param.default>></span><</if>>
  <</for>>)
  <<if $in.returns>><span class=returntype><<type $in.returns>></span><</if>>
