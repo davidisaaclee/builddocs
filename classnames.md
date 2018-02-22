@@ -1,3 +1,6 @@
+# Breaking changes
+- .param has been renamed to .param-name
+
 # Classnames
 membername
 : The name of an exported member.
@@ -17,9 +20,10 @@ type
 paramlist
 : Tag contains a list of parameter types for a function type.
 
-
-param
+param-name
 : The name (not including type) of a function parameter.
+Was previously `param`.
+
 
 defaultvalue
 : The default value of a function parameter.
