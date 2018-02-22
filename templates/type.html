@@ -5,7 +5,7 @@
 
 <<if $in.optional>>?&#8288;<</if>>
 <<if $in.type == "Function">>
-  <span class=fn>fn</span><<fntype $in>>
+  <span class=fn /><<fntype $in>>
 <<elif $in.type == "Array">>
   [<<for elt $in.typeParams || []>><<if $i>>, <</if>><<type elt>><</for>>]
 <<elif $in.type == "union">>
