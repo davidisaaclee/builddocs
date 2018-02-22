@@ -7,7 +7,7 @@
 <<if $in.type == "Function">>
   <span class=fn /><<fntype $in>>
 <<elif $in.type == "Array">>
-  [<<for elt $in.typeParams || []>><<if $i>>, <</if>><<type elt>><</for>>]
+<span class=arraytype><<for elt $in.typeParams>><<if $i>>, <</if>><<type elt>><</for>></span>
 <<elif $in.type == "union">>
   <<for elt $in.typeParams>><<if $i>> | <</if>><<type elt>><</for>>
 <<elif undocumentedProps>>
