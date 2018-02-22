@@ -29,3 +29,6 @@ data-typename
 : The name of a simple type (i.e. not containing type parameters).
 Attached to the `.type` container tag.
 
+data-arity
+: The arity of a paramlist element.
+
