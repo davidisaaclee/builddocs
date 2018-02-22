@@ -24,6 +24,9 @@ param-name
 : The name (not including type) of a function parameter.
 Was previously `param`.
 
+param
+: Tag contains a parameter, including parameter type, name, and default value.
+
 
 defaultvalue
 : The default value of a function parameter.
