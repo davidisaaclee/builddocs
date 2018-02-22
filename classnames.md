@@ -41,4 +41,6 @@ Attached to the `.type` container tag.
 
 data-arity
 : The arity of a paramlist element.
+If any parameter in the paramlist is a rest parameter, this value
+is set to `*`.
 
