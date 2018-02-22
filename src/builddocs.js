@@ -8,6 +8,16 @@ exports.browserImports = require("./browser")
 exports.build = function(config, data) {
   if (!data) data = read(config)
 
+	// TODO: Uncertain if this should also be run on data.all
+	// (What is `all` vs `items`?)
+	data.items = Object.keys(data.items)
+		.reduce(
+			(items, key) => Object.assign(
+				{},
+				items,
+				{ [key]: organizeTags(data.items[key]) }),
+			data.items);
+
   let format = config.format || "html"
   let renderItem =
       format == "html" ? name => '<div data-item="' + name + '"></div>' :
@@ -123,3 +133,57 @@ function moldEnv(config, data) {
   if (config.env) for (let prop in config.env) env[prop] = config.env[prop]
   return env
 }
+
+// Takes a parsed getdocs item, finds all tags by searching for keys starting
+// with the tag delimiter, strips the delimiter, and moves the entries to
+// a new entry in the item with the specified `tagCollectionKey`. Does not
+// mutate the input.
+//
+// ```
+// const item = {
+//   loc: someLoc,
+//   type: 'Function',
+//   $added: 'April 6, 2017',
+//   $public: true,
+// };
+// const organizedItem = organizeTags(item);
+// assert.deepEqual(organizedItem, {
+//   loc: someLoc,
+//   type: 'Function',
+//   tags: {
+//     added: 'April 6, 2017',
+//     public: true,
+//   }
+// });
+// ```
+//
+// ```
+// const item = {
+//   loc: someLoc,
+//   type: 'Function',
+// };
+// const organizedItem = organizeTags(item, 'collectedTags', '$');
+// assert.deepEqual(organizedItem, {
+//   loc: someLoc,
+//   type: 'Function',
+//   collectedTags: {}
+// });
+// ```
+function organizeTags(item, tagCollectionKey = 'tags', tagPrefix = '$') {
+	const isTagKey = key => key.startsWith(tagPrefix);
+	const stripTagPrefix = key => key.substring(tagPrefix.length);
+
+	let retval = {};
+	let tagCollection = {};
+	for (const key in item) {
+		if (isTagKey(key)) {
+			tagCollection[stripTagPrefix(key)] = item[key];
+		} else {
+			retval[key] = item[key];
+		}
+	}
+
+	retval[tagCollectionKey] = tagCollection;
+	return retval;
+}
+
