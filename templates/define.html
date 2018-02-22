@@ -4,7 +4,7 @@
   <<if item.type == "Function" && !item.optional>>
     <code><<if static>>static <</if>><<if /\.constructor$/.test(item.id)>>new <</if>><strong class=membername><a href="#<<t prefix + item.id>>"><<t name>></a></strong><<fntype item>></code>
   <<else>>
-    <code><<if static>>static <</if>><strong class=membername><a href="#<<t prefix + item.id>>"><<t name>></a></strong><<if item.type>>: <<type item>><</if>></code>
+    <code><<if static>>static <</if>><strong class=membername><a href="#<<t prefix + item.id>>"><<t name>></a></strong><<if item.type>><<type item>><</if>></code>
   <</if>>
 </dt>
 
