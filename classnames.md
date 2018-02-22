@@ -11,6 +11,9 @@ typeparams
 parameterized-type
 : Tag contains parameterized type name.
 
+type
+: Tag contains a full type reference.
+
 
 param
 : The name (not including type) of a function parameter.
@@ -21,3 +24,5 @@ defaultvalue
 # Data attributes
 data-typename
 : The name of a simple type (i.e. not containing type parameters).
+Attached to the `.type` container tag.
+

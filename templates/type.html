@@ -1,3 +1,7 @@
+<span 
+	class=type
+	data-typename="<<t $in.type>>"
+>
 <<do
   var undocumentedProps = false
   if ($in.properties) for (var n in $in.properties) if (!hasDescription($in.properties[n])) undocumentedProps = true
@@ -21,7 +25,6 @@
   <<if found>><a href="<<t found>>"><</if>>
 		<span 
 			class="<<t cls>> <<if ($in.typeParams && $in.typeParams.length > 0)>>parameterized-type<</if>>"
-			data-typename="<<t $in.type>>"
 		>
 			<<t $in.type>>
 		</span>
@@ -35,3 +38,4 @@
 		</span>
 	<</if>>
 <</if>>
+</span>
