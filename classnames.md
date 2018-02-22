@@ -5,6 +5,9 @@ membername
 arraytype
 : Tag contains type parameter(s) of an array type.
 
+typeparams
+: Tag contains type parameters of custom parameterized type.
+
 
 param
 : The name (not including type) of a function parameter.

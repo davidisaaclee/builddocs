@@ -21,5 +21,12 @@
   <<if found>><a href="<<t found>>"><</if>>
 		<span class="<<t cls>>" data-typename="<<t $in.type>>"><<t $in.type>></span>
   <<if found>></a><</if>>
-  <<if $in.typeParams>>&lt;<<for elt $in.typeParams>><<if $i>>, <</if>><<type elt>><</for>>&gt;<</if>>
+	<<if $in.typeParams>>
+		<span class=typeparams>
+			<<for elt $in.typeParams>>
+				<<if $i>>, <</if>>
+				<<type elt>>
+				<</for>>
+		</span>
+	<</if>>
 <</if>>
