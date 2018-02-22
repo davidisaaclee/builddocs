@@ -12,3 +12,6 @@ param
 defaultvalue
 : The default value of a function parameter.
 
+# Data attributes
+data-typename
+: The name of a simple type (i.e. not containing type parameters).
