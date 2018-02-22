@@ -44,3 +44,5 @@ data-arity
 If any parameter in the paramlist is a rest parameter, this value
 is set to `*`.
 
+data-optional
+: Attached to a .type tag if the type is an optional wrapped type.
