@@ -1,6 +1,11 @@
 <<in {item, name, static}>>
 
-<dt id="<<t prefix + item.id>>">
+<dt 
+	id="<<t prefix + item.id>>" 
+	<<for tagName, tagValue in item.tags>>
+		<<h "data-" + tagName>>="<<t tagValue>>"
+	<</for>>
+>
   <<if item.type == "Function" && !item.optional>>
     <code><<if static>>static <</if>><<if /\.constructor$/.test(item.id)>>new <</if>><strong class=membername><a href="#<<t prefix + item.id>>"><<t name>></a></strong><<fntype item>></code>
   <<else>>
