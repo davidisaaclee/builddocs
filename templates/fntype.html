@@ -1,6 +1,6 @@
 (<<for param $in.params || []>>
   <<if $i>>, <</if>><<if param.rest>>...<</if>>
-  <<if param.name>><span class=param><<t param.name>>:</span> <</if>>
+  <<if param.name>><span class=param><<t param.name>></span> <</if>>
   <<type param>>
   <<if param.default>><span class=defaultvalue><<t param.default>></span><</if>>
  <</for>>)
