@@ -1,3 +1,25 @@
+**This repository is a work-in-progress.**
+
+This repository is a fork of 
+[builddocs](https://github.com/marijnh/builddocs). The main goal of
+this fork is to generate HTML documentation which can be fully styled
+with CSS, with minimal style elements included in the generated HTML
+files.
+
+Implemented features:
+- Removed a lot of literal text added by HTML templates
+- Made most semantic elements of the generated HTML selectable by CSS
+- Allowed selection of tagged definitions via data-* attributes
+
+Incomplete list of planned tasks:
+- Add examples
+- Remove all literal text added by HTML templates
+- Make all semantic elements of the generated HTML selectable by CSS
+- Allow selection of tagged definitions via data-* attributes
+- Remove all literal text added by HTML templates
+- Document all classnames / selectors
+- Encode parameterized types to be selectable
+
 # builddocs
 
 This is a utility that transforms code documented with
