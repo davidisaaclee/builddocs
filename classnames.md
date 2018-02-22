@@ -27,6 +27,9 @@ Was previously `param`.
 param
 : Tag contains a parameter, including parameter type, name, and default value.
 
+rest-param
+: Tag contains a rest parameter. Attached to `.param` element.
+
 
 defaultvalue
 : The default value of a function parameter.

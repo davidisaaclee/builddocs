@@ -1,7 +1,6 @@
 <span class=paramlist data-arity=<<t $in.params.length>>>
 	<<for param $in.params || []>>
-	<span class="param">
-  <<if param.rest>>...<</if>>
+	<span class="param<<if param.rest>> rest-param<</if>>">
   <<if param.name>><span class=param-name><<t param.name>></span> <</if>>
   <<type param>>
   <<if param.default>><span class=defaultvalue><<t param.default>></span><</if>>
