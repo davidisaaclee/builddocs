@@ -19,7 +19,12 @@
   <<do var found = linkType($in)
        var cls = /^"/.test($in.type) ? "string" : /(^|\.)[A-Z]\w+$/.test($in.type) ? "type" : "prim" >>
   <<if found>><a href="<<t found>>"><</if>>
-		<span class="<<t cls>>" data-typename="<<t $in.type>>"><<t $in.type>></span>
+		<span 
+			class="<<t cls>> <<if ($in.typeParams && $in.typeParams.length > 0)>>parameterized-type<</if>>"
+			data-typename="<<t $in.type>>"
+		>
+			<<t $in.type>>
+		</span>
   <<if found>></a><</if>>
 	<<if $in.typeParams>>
 		<span class=typeparams>

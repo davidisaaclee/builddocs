@@ -8,6 +8,9 @@ arraytype
 typeparams
 : Tag contains type parameters of custom parameterized type.
 
+parameterized-type
+: Tag contains parameterized type name.
+
 
 param
 : The name (not including type) of a function parameter.
