@@ -10,15 +10,14 @@ Implemented features:
 - Removed a lot of literal text added by HTML templates
 - Made most semantic elements of the generated HTML selectable by CSS
 - Allowed selection of tagged definitions via data-* attributes
+- Allowed parameterized types to be selectable
 
 Incomplete list of planned tasks:
 - Add examples
 - Remove all literal text added by HTML templates
 - Make all semantic elements of the generated HTML selectable by CSS
-- Allow selection of tagged definitions via data-* attributes
 - Remove all literal text added by HTML templates
 - Document all classnames / selectors
-- Encode parameterized types to be selectable
 
 # builddocs
 
