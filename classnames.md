@@ -14,6 +14,9 @@ parameterized-type
 type
 : Tag contains a full type reference.
 
+paramlist
+: Tag contains a list of parameter types for a function type.
+
 
 param
 : The name (not including type) of a function parameter.
