@@ -1,4 +1,16 @@
-**This repository is a work-in-progress.**
+**This repository is deprecated.**
+I no longer think this fork is a good idea. CSS is a convenient and
+flexible way to format the documentation, and I still think
+there's an argument to be made that the syntax of a technical document
+lies in the domain of styling. But in practice, this library misses
+on at least one important point, and I'm not sure if it can be fixed
+while continuing to define syntax via CSS:
+**A user can't select the inserted syntax elements.** For example,
+if a user wants to copy and paste a type signature as it appears on
+their screen, they will only be able to select and copy the
+identifiers.
+
+* * *
 
 This repository is a fork of 
 [builddocs](https://github.com/marijnh/builddocs). The main goal of
