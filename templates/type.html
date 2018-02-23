@@ -11,8 +11,6 @@
   <span class=fn /><<fntype $in>>
 <<elif $in.type == "Array">>
 <span class=arraytype><<for elt $in.typeParams>><<if $i>>, <</if>><<type elt>><</for>></span>
-<<elif $in.type == "union">>
-  <<for elt $in.typeParams>><<if $i>> | <</if>><<type elt>><</for>>
 <<elif undocumentedProps>>
   <<do var needComma = false>>
   {<<for name, prop in $in.properties>>
