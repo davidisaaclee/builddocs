@@ -1,5 +1,8 @@
 # Breaking changes
 - .param has been renamed to .param-name
+- .prim and .type classes have been removed
+- .type now refers to any complete type (including types which are
+parameters of other types)
 
 # Classnames
 membername
@@ -10,6 +13,10 @@ arraytype
 
 typeparams
 : Tag contains type parameters of custom parameterized type.
+
+type-constructor
+: Tag contains tag constructor: either the full name of a simple type, or
+the name of a parameterized type without its parameters.
 
 parameterized-type
 : Tag contains parameterized type name.

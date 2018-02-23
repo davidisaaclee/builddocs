@@ -22,7 +22,7 @@
   <<do var found = linkType($in)
        var cls = /^"/.test($in.type) ? "string" : /(^|\.)[A-Z]\w+$/.test($in.type) ? "type" : "prim" >>
 	<span 
-		class="<<t cls>> <<if ($in.typeParams && $in.typeParams.length > 0)>>parameterized-type<</if>>"
+		class="type-constructor<<if ($in.typeParams && $in.typeParams.length > 0)>> parameterized-type<</if>>"
 	>
 		<<if found>><a href="<<t found>>"><</if>>
 			<<t $in.type>>
